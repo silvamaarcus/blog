@@ -1,0 +1,63 @@
+// Resetar formatação da página.
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+// Importando estiloos para cores, layout, espaçamento e fontes.I
+@import "sass/colors";
+@import "sass/layout";
+@import "sass/spacing";
+@import "sass/typography";
+
+// Animação para o 'scroll' do mouse nos links internos.
+html {
+  scroll-behavior: smooth;
+}
+
+// Configuração do body
+body {
+  width: 100%; // Ocupar 100% da largura.
+  position: relative; // Posição relativa aos elementos.
+
+  background-color: $black-dark; // Cor de fundo.
+
+  // Aplicando estilo a barra de rolagem lateral.
+  &::-webkit-scrollbar {
+    padding-right: 2px; // Espaço p/ canto direito.
+    width: 8px; // Largura da barra.
+    background: transparent; // Sem cor para barra.
+  }
+  // Aplicando estilo a barrinha que percorre a barra de rolagem.
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px; // Arrendodando as bordas.
+    background: $black-light; // Cor da barrinha.
+  }
+}
+
+// Borda para conferência de layout apenas. Será removida no final.
+.border {
+  border: 1px solid red;
+}
+
+// Classe para esconder elemento.
+.hidden {
+  overflow: hidden;
+}
+
+// Classe para posicionar elemento.
+.relative {
+  position: relative;
+}
+
+// Definindo padrão para todas as imagens inseridas.
+svg,
+img {
+  width: 100%;
+  //height: auto;
+}
+
+// Importando componentes.
+@import "sass/menu";
+@import "sass/icons";
+@import "sass/buttons";
