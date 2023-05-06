@@ -1569,6 +1569,93 @@ img {
   width: 100%;
 }
 
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #151B26;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu li {
+  margin-left: 24px;
+}
+@media screen and (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+}
+
+.logo {
+  max-width: 64px;
+  min-width: 48px;
+}
+
+.cta-desktop, .search {
+  display: block;
+}
+@media screen and (max-width: 960px) {
+  .cta-desktop, .search {
+    display: none;
+  }
+}
+
+.cta-mobile {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .cta-mobile {
+    display: block;
+  }
+}
+
+.bx {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .bx {
+    display: block;
+  }
+}
+.bx::after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  translate: -50%, -50%;
+  border-radius: 2px;
+  background-color: #F7F9FC;
+}
+.bx::before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  translate: -50%, -50%;
+  border-radius: 2px;
+  background-color: #F7F9FC;
+}
+
 .icon {
   max-width: 64px;
   transition: 0.5s ease;
@@ -1613,4 +1700,58 @@ img {
   .icon-xl {
     max-width: 144px;
   }
+}
+
+.btn {
+  display: inline-block;
+  color: #F7F9FC;
+  padding: 8px 24px;
+  background: linear-gradient(224.78deg, #5390e3 8.12%, #1357b3 92.21%);
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+  color: #F7F9FC;
+  transition: 0.3s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+input {
+  accent-color: #1B69D2;
+}
+
+input,
+select,
+option,
+textarea {
+  padding: 10px 12px;
+  background: #151B26;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  color: #F7F9FC;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+}
+
+.btn-search {
+  cursor: pointer;
+  height: 48px;
+  width: 56px;
+  background-image: url("../../svg/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translate3d(-6px, 0, 0);
+  background-color: #151B26;
+  border: 0;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */

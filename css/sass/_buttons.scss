@@ -1,0 +1,66 @@
+.btn {
+  display: inline-block;
+
+  color: $white-light;
+
+  padding: 8px 24px;
+
+  background: linear-gradient(224.78deg, #5390e3 8.12%, #1357b3 92.21%);
+
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+
+  @include typeface-2(p3, desktop);
+
+  color: $white-light;
+
+  // tempo para transicao de efeito hover
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+input {
+  // cor para input que possuem elementos. ex) radio ou select.
+  accent-color: $primary-normal;
+}
+
+input,
+select,
+option,
+textarea {
+  padding: 10px 12px;
+  background: $black-light;
+
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+
+  color: $white-light;
+  @include typeface-2(p3, desktop);
+}
+
+.btn-search {
+  cursor: pointer;
+
+  height: 48px;
+  width: 56px;
+
+  background-image: url("../../svg/icon-search.svg");
+  // bloquear repetição do svg.
+  background-repeat: no-repeat;
+  // centralizar o svg no eixo x e y.
+  background-position: center center;
+
+  // colar o 'botão fake' criado para lupa, no input de busca.
+  transform: translate3d(-6px, 0, 0);
+
+  background-color: $black-light;
+  border: 0;
+  border-radius: 4px;
+}

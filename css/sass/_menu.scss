@@ -1,0 +1,102 @@
+header {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid $black-light;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+
+  display: flex;
+
+  li {
+    margin-left: 24px;
+  }
+
+  // esconder o menu no responsivo.
+  @include responsive(s) {
+    display: none;
+  }
+}
+
+.logo {
+  max-width: 64px;
+  min-width: 48px;
+}
+
+.cta-desktop, .search {
+  display: block;
+  @include responsive(s){
+    display: none;
+  }
+}
+
+.cta-mobile{
+  display: none;
+  @include responsive(s){
+    display: block;
+  }
+}
+
+// menu hamburguer
+.bx {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  position: relative;
+  
+  display: none;
+
+  // mostrar o menu (hamburguer) no responsivo.
+  @include responsive(s) {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    display: block;
+
+    position: absolute;
+    top: 35%;
+    left: 40%;
+
+    // definir ponto de referencia no meio do elemento.
+    translate: (-50%, -50%);
+
+    border-radius: 2px;
+
+    background-color: $white-light;
+  }
+
+  &::before {
+    content: "";
+    width: 70%;
+    height: 2px;
+    display: block;
+
+    position: absolute;
+    top: 65%;
+    left: 60%;
+
+    // definir ponto de referencia no meio do elemento.
+    translate: (-50%, -50%);
+
+    border-radius: 2px;
+
+    background-color: $white-light;
+  }
+}
