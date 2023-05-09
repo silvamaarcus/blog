@@ -43,18 +43,23 @@ $gutter: 32px;
   }
 }
 
+// função para calcular o tamanho do grid.
+// $col -> variável p/ número de colunas.
+// $total -> variável p/ quantidade total de grids.
 @function grid($col, $total: 12) {
   @return ($col / $total) * 100%;
 }
 
+// laço de repetição p/ cada grid.
 @for $i from 1 through 12 {
   .grid-#{$i} {
     width: calc(#{grid($i)} - #{$gutter});
     margin: $gutter / 2;
 
     padding: 16px 0px;
-    float: left;
+    float: left; // setar os elementos lada-a-lado.
 
+    // responsividade
     @include responsive(s) {
       width: calc(100% - #{$gutter});
       float: none;
@@ -85,7 +90,7 @@ $gutter: 32px;
   overflow: hidden;
   //position: sticky;
 
-  // clearfix
+  // clearfix -> hack p/ os elementos filhos ñ perderem a referencia. 
   &::after {
     content: "";
     display: table;
