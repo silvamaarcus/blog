@@ -62,11 +62,12 @@ $gutter: 32px;
     // responsividade
     @include responsive(s) {
       width: calc(100% - #{$gutter});
-      float: none;
+      float: none; // setar os elementos um abaixo do outro.
     }
   }
 }
 
+// função para tamanho do grid, sem quebra dos elementos.
 @for $i from 1 through 12 {
   .grid-nobreak-#{$i} {
     width: calc(#{grid($i)} - #{$gutter});
@@ -271,6 +272,7 @@ $gutter: 32px;
   border-right: 2px solid $black-normal;
 }
 
+// foto do usuário
 .profile {
   width: 48px;
   height: 48px;
@@ -278,6 +280,7 @@ $gutter: 32px;
   border-radius: 50%;
 }
 
+// foto grande do usuário. aparece após o login.
 .profile-big {
   width: 128px;
   height: 128px;
@@ -285,6 +288,7 @@ $gutter: 32px;
   border-radius: 50%;
 }
 
+// borda da imagem de profile.
 .profile-img {
   border-radius: 50%;
   border: 2px solid $primary-normal;
