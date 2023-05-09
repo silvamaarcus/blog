@@ -91,7 +91,7 @@ $gutter: 32px;
   overflow: hidden;
   //position: sticky;
 
-  // clearfix -> hack p/ os elementos filhos ñ perderem a referencia. 
+  // clearfix -> hack p/ os elementos filhos ñ perderem a referencia.
   &::after {
     content: "";
     display: table;
@@ -301,6 +301,9 @@ $gutter: 32px;
 
   transition: 0.2s ease;
 
+  cursor: pointer;
+
+  // mudar cor do card ao passar o mouse sobre ele.
   &:hover {
     background-color: rgba(15, 20, 31, 0.2);
   }
@@ -308,10 +311,12 @@ $gutter: 32px;
 
 .thumb {
   img {
+    // dar zoom na foto em destaque.
     transform: scale(1.05);
-    transition: 0.5s ease;
+    transition: 0.5s ease; // animação para zoom do hover.
   }
 
+  // dar mais zoom na foto em destaque ao passar o mouse.
   &:hover {
     img {
       transform: scale(1.1);
@@ -325,14 +330,11 @@ $gutter: 32px;
 
   background-color: $black-normal;
   border-radius: 4px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  
   img {
+    // adptar a imagem ao tamanho da div.
     object-fit: cover;
-
+    // dar zoom na foto em destaque.
     transition: 0.7s ease;
   }
 

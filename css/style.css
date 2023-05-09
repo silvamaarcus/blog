@@ -483,6 +483,7 @@
   border-radius: 4px;
   background-color: rgba(15, 20, 31, 0);
   transition: 0.2s ease;
+  cursor: pointer;
 }
 .card:hover {
   background-color: rgba(15, 20, 31, 0.2);
@@ -501,9 +502,6 @@
   max-height: 420px;
   background-color: #0F141F;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .img-banner img {
   -o-object-fit: cover;
