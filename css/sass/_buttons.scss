@@ -1,0 +1,62 @@
+// configurando links
+a {
+  text-decoration: none; // remover sublinhado
+
+  // estabelecendo tamanho da fonte , config da fonte definida no "_typography.scss":
+  // fonte: 'p3' | tela: 'desktop'
+  @include typeface-2(p3, desktop);
+
+  color: $white-light;
+
+  transition: 0.3s ease; // tempo de transição para efeito hover
+
+  &:hover {
+    opacity: 0.7; // aplicar opacidade
+  }
+}
+
+// configurando cor acentuada p/ inputs (cor de caixinha marcada)
+input {
+  accent-color: $primary-normal;
+}
+
+// configurando inputs
+input,
+select,
+option,
+textarea {
+  padding: 10px 12px;
+  background-color: $black-light;
+  border: 0; // remover bordas
+  border-radius: 4px;
+  width: 100%; // sempre ocupar a largura total do 'pai'
+  color: $white-light;
+  @include typeface-2(p3, desktop);
+}
+
+// configurando botão principal
+.btn {
+  display: inline-block;
+  color: $white-light;
+  padding: 8px 24px;
+  background: linear-gradient(225deg, #5390e3 8.12%, #1357b3 92.21%);
+  border-radius: 4px;
+}
+
+// configurando botão de pesquisar
+.btn-search {
+  cursor: pointer;
+  height: 48px;
+  width: 56px;
+
+  background-image: url("../../svg/icon-search.svg");
+  background-repeat: no-repeat; // ñ repetir icone
+  background-position: center center; // centralizar nos dois eixos
+
+  background-color: $black-light;
+  border: 0;
+  border-radius: 4px;
+
+  // colar o elemento (botao) no input
+  transform: translate3d(-6px, 0, 0); // descer 6px no eixo y
+}

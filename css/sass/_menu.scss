@@ -1,0 +1,136 @@
+header {
+  width: 100%;
+  height: 80px;
+
+  // elementos lado a lado
+  display: flex;
+  // alinhamento eixo x: elementos em cada canto da página
+  justify-content: space-between;
+  // alinhamento eixo y: elementos se alinham ao centro
+  align-items: center;
+
+  // borda abaixo do elemento
+  border-bottom: 1px solid $black-light;
+}
+
+// tamanhos para logo
+.logo {
+  max-width: 64px;
+  min-width: 48px;
+}
+
+.cta-desktop {
+  display: block;
+
+  @include responsive(s) {
+    display: none;
+  }
+}
+
+.cta-mobile {
+  display: none;
+
+  @include responsive(s) {
+    display: block;
+  }
+}
+
+// menu hamburguer
+.bx {
+  // largura e altura do icone
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  // definindo o pai (.bx) com posição relativa para pseudo-classe
+  position: relative;
+
+  // estado inicial do menu hamburguer: desativado
+  display: none;
+
+  // ativar menu hamburguer em telas menores que 960px
+  @include responsive(s) {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+
+    // ocupar 70% da largura do pai (.bx)
+    width: 70%;
+    // espessura (altura) da linha
+    height: 2px;
+
+    // definindo pseudo-classe com posição absoluta em relação ao pai (.bx)
+    position: absolute;
+
+    // definindo posição dos elementos.
+    transform: translate(-50%, -50%); // centralizar o eixo do elemento
+    top: 35%; // 35% de distância, do topo do pai (.bx)
+    left: 40%; // 40% de distância, a esqueda do pai (.bx)
+
+    border-radius: 2px;
+
+    background-color: $white-light;
+  }
+
+  // pseudo-classes
+  &::before {
+    content: "";
+    display: block;
+
+    // ocupar 70% da largura do pai (.bx)
+    width: 70%;
+    // espessura (altura) da linha
+    height: 2px;
+
+    // definindo pseudo-classe com posição absoluta em relação ao pai (.bx)
+    position: absolute;
+
+    // definindo posição dos elementos.
+    transform: translate(-50%, -50%); // centralizar o eixo do elemento
+    top: 65%; // 35% de distância, do topo do pai (.bx)
+    left: 60%; // 40% de distância, a esqueda do pai (.bx)
+
+    border-radius: 2px;
+
+    background-color: $white-light;
+  }
+}
+
+nav {
+  // elementos em lado a lado
+  display: flex;
+  // alinhamento eixo x: elementos alinhadaos da esq p/ direita
+  justify-content: flex-start;
+  // alinhamento eixo y: elementos se alinham ao centro
+  align-items: center;
+}
+
+.menu {
+  // removendo bolinhas do link
+  list-style: none;
+
+  // links em lado a lado
+  display: flex;
+
+  // espaçamento entre os links
+  li {
+    margin-left: 24px;
+  }
+
+  // desativar menu hamburguer em telas menores que 960px
+  @include responsive(s) {
+    display: none;
+  }
+}
+
+.search {
+  display: block;
+
+  @include responsive (s) {
+    display: none;
+  }
+}
