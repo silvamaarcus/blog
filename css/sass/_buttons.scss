@@ -6,7 +6,7 @@ a {
   // fonte: 'p3' | tela: 'desktop'
   @include typeface-2(p3, desktop);
 
-  color: $white-light;
+  color: $white-dark;
 
   transition: 0.3s ease; // tempo de transição para efeito hover
 

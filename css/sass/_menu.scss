@@ -19,6 +19,7 @@ header {
   min-width: 48px;
 }
 
+// tipo de botão - desktop
 .cta-desktop {
   display: block;
 
@@ -27,6 +28,7 @@ header {
   }
 }
 
+// tipo de botão - mobile
 .cta-mobile {
   display: none;
 
@@ -127,10 +129,101 @@ nav {
   }
 }
 
+// ativar e desativar campo de busca, de acordo com tamanho da tela
 .search {
   display: block;
 
-  @include responsive (s) {
+  @include responsive(s) {
     display: none;
+  }
+}
+
+// menu mobile
+.menu-mobile {
+  // ocupar 100% da largura do pai (.relative)
+  width: 100%;
+  // ocupar 100% da altura da página, abaixo do menu
+  height: 100vh;
+
+  background-color: $black-normal;
+
+  // transição para mostar menu
+  transition: 0.7s ease;
+
+  position: absolute;
+  top: 0;
+  left: -100%; // menu mobile desativado
+
+  li {
+    border-bottom: 1px solid $black-light;
+
+    .link-menu-mobile {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 24px 16px 24px 16px;
+
+      &:hover {
+        background-color: $black-light;
+        padding-left: 24px;
+      }
+    }
+  }
+}
+.menu-mobile.showmenu {
+  // ocupar 100% da largura do pai (.relative)
+  width: 100%;
+  // ocupar 100% da altura da página, abaixo do menu
+  height: 100vh;
+
+  background-color: $black-normal;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bx.active {
+  &::after {
+    content: "";
+    display: block;
+
+    width: 70%;
+    height: 2px;
+
+    position: absolute;
+
+    transform: translate(-50%, -50%) rotate(135deg); // girar o tracinho em 135°
+    // centralizar os eixos x e y
+    top: 50%;
+    left: 50%;
+    // transição para tracinho virar 'x'
+    transition: 0.6s ease;
+
+    border-radius: 2px;
+
+    background-color: $white-light;
+  }
+
+  // pseudo-classes
+  &::before {
+    content: "";
+    display: block;
+
+    width: 70%;
+    height: 2px;
+
+    position: absolute;
+
+    transform: translate(-50%, -50%) rotate(-315deg); // girar o tracinho em 315°
+    // centralizar os eixos x e y
+    top: 50%;
+    left: 50%;
+    // transição para tracinho virar 'x'
+    transition: 0.6s ease;
+
+    border-radius: 2px;
+
+    background-color: $white-light;
   }
 }
