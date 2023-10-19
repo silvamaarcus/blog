@@ -7,7 +7,7 @@ $container-m: 960px;
 $container-s: 620px;
 $container-xs: 340px;
 
-// Espaçamento padrão.
+// Espaçamento padrão entre colunas.
 $gutter: 32px;
 
 // Mixin - Definindo responsividade através de funções, de forma automática.
@@ -51,12 +51,12 @@ $gutter: 32px;
   }
 }
 
-// Função para Grid´s
-
+// Função para dividir automaticamente a tela em Grids, são 12 no total. 
+// A função irá respeitar o tamanho de tela presente, com responsividade. 
 @function grid($col, $total: 12) {
   @return ($col / $total) * 100%;
 }
-
+// Looping da função p/ determinar tamanho do grid e responsividade.
 @for $i from 1 through 12 {
   .grid-#{$i} {
     width: calc(#{grid($i)} - #{$gutter});
@@ -71,7 +71,7 @@ $gutter: 32px;
     }
   }
 }
-
+// Looping da função p/ determinar apenas o tamnho do grid, sem "quebrar" a página.
 @for $i from 1 through 12 {
   .grid-nobreak-#{$i} {
     width: calc(#{grid($i)} - #{$gutter});
@@ -82,6 +82,7 @@ $gutter: 32px;
   }
 }
 
+// Estrutura de container para aplicar na página.
 .container {
   max-width: $container-l; // Definindo tamanho padrão para container.
   margin: 0 auto; // Centralizando container.
@@ -228,7 +229,6 @@ $gutter: 32px;
 
 // Larguras e Alturas
 
-
 // Altura automática p/ o elemento.
 .h-auto {
   height: auto !important;
@@ -325,42 +325,42 @@ $gutter: 32px;
   }
 }
 
-.thumb {
-  img {
-    transform: scale(1.05);
-    transition: 0.5s ease;
-  }
+// .thumb {
+//   img {
+//     transform: scale(1.05);
+//     transition: 0.5s ease;
+//   }
 
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
-}
+//   &:hover {
+//     img {
+//       transform: scale(1.1);
+//     }
+//   }
+// }
 
-.img-banner {
-  width: 100%;
-  max-height: 420px;
+// .img-banner {
+//   width: 100%;
+//   max-height: 420px;
 
-  background-color: $black-normal;
-  border-radius: 4px;
+//   background-color: $black-normal;
+//   border-radius: 4px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  img {
-    object-fit: cover;
+//   img {
+//     object-fit: cover;
 
-    transition: 0.7s ease;
-  }
+//     transition: 0.7s ease;
+//   }
 
-  &:hover {
-    img {
-      transform: scale(1.025);
-    }
-  }
-}
+//   &:hover {
+//     img {
+//       transform: scale(1.025);
+//     }
+//   }
+// }
 
 .bg-section {
   background-color: rgba(15, 20, 31, 0.5);
