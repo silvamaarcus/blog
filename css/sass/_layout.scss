@@ -51,8 +51,8 @@ $gutter: 32px;
   }
 }
 
-// Função para dividir automaticamente a tela em Grids, são 12 no total. 
-// A função irá respeitar o tamanho de tela presente, com responsividade. 
+// Função para dividir automaticamente a tela em Grids, são 12 no total.
+// A função irá respeitar o tamanho de tela presente, com responsividade.
 @function grid($col, $total: 12) {
   @return ($col / $total) * 100%;
 }
@@ -290,7 +290,6 @@ $gutter: 32px;
   border-right: 2px solid $black-normal;
 }
 
-
 // Backgrounds
 .bg-gray {
   background-color: $black-normal;
@@ -325,43 +324,6 @@ $gutter: 32px;
   }
 }
 
-// .thumb {
-//   img {
-//     transform: scale(1.05);
-//     transition: 0.5s ease;
-//   }
-
-//   &:hover {
-//     img {
-//       transform: scale(1.1);
-//     }
-//   }
-// }
-
-// .img-banner {
-//   width: 100%;
-//   max-height: 420px;
-
-//   background-color: $black-normal;
-//   border-radius: 4px;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   img {
-//     object-fit: cover;
-
-//     transition: 0.7s ease;
-//   }
-
-//   &:hover {
-//     img {
-//       transform: scale(1.025);
-//     }
-//   }
-// }
-
 .bg-section {
   background-color: rgba(15, 20, 31, 0.5);
 }
@@ -392,4 +354,23 @@ $gutter: 32px;
   border-radius: 4px;
 
   background-color: rgba(27, 105, 210, 0.2);
+}
+
+// Section Banner
+.img-banner {
+  width: 100%;
+  max-height: 330px;
+
+  border-radius: 4px;
+
+  img {
+    object-fit: cover;
+    transition: 0.7s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.025);
+    }
+  }
 }
