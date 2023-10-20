@@ -395,3 +395,56 @@ $gutter: 32px;
     text-align: center;
   }
 }
+
+//Posts
+.post-img {
+  grid-area: a;
+}
+.post-user {
+  grid-area: b;
+}
+.post-social {
+  grid-area: c;
+}
+.post-resume {
+  grid-area: d;
+}
+
+.autor-card-post {
+  border: 1px solid $black-light;
+  border-radius: 4px;
+
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "a d d";
+}
+
+@include responsive(s) {
+  .autor-card-post {
+    .post-img {
+      margin-bottom: 8px;
+    }
+    .post-user {
+      h5,
+      h6 {
+        text-align: center;
+        margin-left: -24px;
+      }
+    }
+    .post-social {
+      margin-top: 8px;
+      a {
+        text-align: center;
+        margin-left: 24px;
+        margin-top: 8px;
+      }
+    }
+
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "d d d"
+      "c c c";
+  }
+}
