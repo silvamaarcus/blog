@@ -523,15 +523,18 @@
   transform: scale(1.025);
 }
 
+.thumb img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.7s ease;
+}
+.thumb:hover img {
+  transform: scale(1.05);
+}
+
 .post-card {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  border: 1px solid #151b26;
-  border-radius: 4px;
-}
-.post-card:hover {
-  background-color: #06090f;
-  transition: 0.1s ease;
 }
 .post-card .post-card-date {
   text-align: center;
