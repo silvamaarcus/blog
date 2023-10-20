@@ -9,8 +9,14 @@ header {
   // alinhamento eixo y: elementos se alinham ao centro
   align-items: center;
 
-  // borda abaixo do elemento
-  border-bottom: 1px solid $black-light;
+  // Menu com Efeito de Trasnparência
+
+  // fazer com que o Menu fique fixo na tela, indenpendente do Scroll
+  position: fixed;
+  // fazer com que o Menu fique a frente de todos os elementos
+  z-index: 999;
+  background-color: rgba(6, 9, 15, 0.4);
+  backdrop-filter: blur(6px);
 }
 
 // tamanhos para logo
@@ -39,6 +45,7 @@ header {
 
 // menu hamburguer
 .bx {
+  
   // largura e altura do icone
   width: 40px;
   height: 40px;
@@ -75,7 +82,7 @@ header {
 
     border-radius: 2px;
 
-    background-color: $white-light;
+    background-color: $white-light !important;
   }
 
   // pseudo-classes
@@ -98,7 +105,7 @@ header {
 
     border-radius: 2px;
 
-    background-color: $white-light;
+    background-color: $white-light !important;
   }
 }
 
@@ -145,7 +152,11 @@ nav {
   // ocupar 100% da altura da página, abaixo do menu
   height: 100vh;
 
-  background-color: $black-normal;
+  // Menu com Efeito de Trasnparência
+  margin-top: 80px;
+  background-color: rgba(6, 9, 15, 0.4) !important;
+  backdrop-filter: blur(12px);
+  z-index: 990;
 
   // transição para mostar menu
   transition: 0.7s ease;
@@ -155,7 +166,7 @@ nav {
   left: -100%; // menu mobile desativado
 
   li {
-    border-bottom: 1px solid $black-light;
+    border-bottom: 1px solid $black-dark;
 
     .link-menu-mobile {
       display: inline-block;
@@ -175,8 +186,6 @@ nav {
   width: 100%;
   // ocupar 100% da altura da página, abaixo do menu
   height: 100vh;
-
-  background-color: $black-normal;
 
   position: absolute;
   top: 0;
@@ -202,7 +211,7 @@ nav {
 
     border-radius: 2px;
 
-    background-color: $white-light;
+    background-color: $white-light !important;
   }
 
   // pseudo-classes
@@ -224,6 +233,6 @@ nav {
 
     border-radius: 2px;
 
-    background-color: $white-light;
+    background-color: $white-light !important;
   }
 }
