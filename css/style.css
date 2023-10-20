@@ -530,7 +530,7 @@
   border-radius: 4px;
 }
 .post-card:hover {
-  background-color: #0f141f;
+  background-color: #06090f;
   transition: 0.1s ease;
 }
 .post-card .post-card-date {
