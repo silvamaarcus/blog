@@ -328,27 +328,25 @@ $gutter: 32px;
   background-color: rgba(15, 20, 31, 0.5);
 }
 
+// Cards para sinalização ao usuário
 .card-danger {
   border: 2px solid $red-normal;
   border-radius: 4px;
 
   background-color: rgba(240, 61, 61, 0.2);
 }
-
 .card-success {
   border: 2px solid $green-normal;
   border-radius: 4px;
 
   background-color: rgba(11, 176, 123, 0.2);
 }
-
 .card-warning {
   border: 2px solid $yellow-normal;
   border-radius: 4px;
 
   background-color: rgba(255, 206, 82, 0.2);
 }
-
 .card-info {
   border: 2px solid $primary-normal;
   border-radius: 4px;
