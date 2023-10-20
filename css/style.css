@@ -523,6 +523,20 @@
   transform: scale(1.025);
 }
 
+.post-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: 1px solid #151b26;
+  border-radius: 4px;
+}
+.post-card:hover {
+  background-color: #0f141f;
+  transition: 0.1s ease;
+}
+.post-card .post-card-date {
+  text-align: center;
+}
+
 .s-0 {
   margin: 0;
   padding: 0;
