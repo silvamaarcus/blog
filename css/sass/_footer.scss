@@ -1,0 +1,41 @@
+.list-item {
+  list-style: none;
+}
+
+.footer-links {
+  @include responsive(s) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-news {
+  @include responsive(l) {   
+    a {
+      margin-left: 24px;
+      padding-left: 32px;
+      height: 100%;
+    }
+  }
+
+  @include responsive(s) {
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.social-media {
+  @include responsive(s) {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 24px;
+  }
+}

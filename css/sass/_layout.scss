@@ -122,14 +122,6 @@ $gutter: 32px;
   }
 }
 
-.h-100 {
-  height: 100vh;
-}
-
-.h-100p {
-  height: 100%;
-}
-
 // Classe para que os elementos fiquem em posição relativa. (Sempre aplicar na div pai)
 .relative {
   position: relative;
@@ -230,6 +222,14 @@ $gutter: 32px;
 // Larguras e Alturas
 
 // Altura automática p/ o elemento.
+.h-100 {
+  height: 100vh;
+}
+
+.h-100p {
+  height: 100%;
+}
+
 .h-auto {
   height: auto !important;
 }
