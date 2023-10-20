@@ -1860,6 +1860,10 @@ textarea {
 
 .list-item {
   list-style: none;
+  transition: 0.7s ease;
+}
+.list-item:hover {
+  padding-left: 24px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1872,7 +1876,7 @@ textarea {
 @media screen and (max-width: 1440px) and (min-width: 1216px) {
   .footer-news a {
     margin-left: 24px;
-    padding-left: 32px;
+    padding-left: 48px;
     height: 100%;
   }
 }

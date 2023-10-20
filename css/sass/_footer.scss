@@ -1,5 +1,10 @@
 .list-item {
   list-style: none;
+  transition: 0.7s ease;
+
+  &:hover {
+    padding-left: 24px;
+  }
 }
 
 .footer-links {
@@ -10,10 +15,10 @@
 }
 
 .footer-news {
-  @include responsive(l) {   
+  @include responsive(l) {
     a {
       margin-left: 24px;
-      padding-left: 32px;
+      padding-left: 48px;
       height: 100%;
     }
   }
