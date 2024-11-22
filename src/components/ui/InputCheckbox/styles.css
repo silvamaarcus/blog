@@ -1,0 +1,67 @@
+.custom-checkbox {
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Esconder checkbox do navegador */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Novo checkbox */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--black-light);
+  border-radius: 4px;
+}
+
+/* Quando o mouse está sobre o checkbox */
+.custom-checkbox:hover input ~ .checkmark {
+  border: 2px solid var(--blue);
+}
+/* Quando o checkbox está desabilitado */
+.custom-checkbox input:disabled ~ .checkmark {
+  border: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+\
+
+/* Quando o checkbox está marcado */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: var(--blue);
+}
+
+/* Criar o checkmark/indicador (escondido quando não marcado) */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Mostrar o checkmark quando marcado */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Estilizar o checkmark */
+.custom-checkbox .checkmark:after {
+  content: "\2714";
+  left: 25%;
+  top: 0;
+  width: 12px;
+  height: 8px;
+  background-cololr: var(--white);
+}
