@@ -1,0 +1,22 @@
+.custom-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: var(--black-light);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease;
+}
+.custom-radio:hover {
+  border: 2px solid var(--blue);
+}
+.custom-radio:checked {
+  border: 8px solid var(--blue);
+}
+.custom-radio:disabled {
+  border: 8px solid var(--black-light);
+  background: var(--gray-4);
+}
