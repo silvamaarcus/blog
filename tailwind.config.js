@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const textStyles = require("./src/styles/textStyles");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -20,6 +23,9 @@ export default {
           DEFAULT: "#1B69D2",
           dark: "#1357B3",
         },
+      },
+      fontSize: {
+        ...textStyles, // Importando as configurações de texto
       },
     },
   },

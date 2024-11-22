@@ -8,9 +8,9 @@ function App() {
           sapiente praesentium, in cupiditate nesciunt non. Temporibus.
         </p>
       </main>
-      <h1 className="bg-gradient-1 bg-clip-text text-9xl text-transparent">
-        Teste.tsx
-      </h1>
+
+      <h1 className="text-h1 sm:text-h1Sm">Esse é um titulo</h1>
+      <h2 className="text-h2 sm:text-h2Sm">Esse é um titulo</h2>
     </>
   );
 }
