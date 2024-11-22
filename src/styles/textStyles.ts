@@ -2,6 +2,7 @@
 // * LEMBRE-SE: MOBILE FIRST (Tailwind CSS)
 
 const textStyles = {
+  // Títulos
   h1: [
     "3.5rem",
     {
@@ -24,7 +25,7 @@ const textStyles = {
       fontWeight: "500",
     },
   ],
-  h2Sm:[
+  h2Sm: [
     "4rem",
     {
       lineHeight: "100%",
@@ -39,7 +40,7 @@ const textStyles = {
       fontWeight: "600",
     },
   ],
-  h3Sm:[
+  h3Sm: [
     "3rem",
     {
       lineHeight: "110%",
@@ -54,7 +55,7 @@ const textStyles = {
       fontWeight: "600",
     },
   ],
-  h4Sm:[
+  h4Sm: [
     "2.25rem",
     {
       lineHeight: "120%",
@@ -69,7 +70,7 @@ const textStyles = {
       fontWeight: "600",
     },
   ],
-  h5Sm:[
+  h5Sm: [
     "1.5rem",
     {
       lineHeight: "130%",
@@ -84,7 +85,7 @@ const textStyles = {
       fontWeight: "600",
     },
   ],
-  h6Sm:[
+  h6Sm: [
     "1.125rem",
     {
       lineHeight: "140%",
@@ -92,6 +93,53 @@ const textStyles = {
     },
   ],
 
+  // Subtítulos
+  b1: [
+    "6rem",
+    {
+      lineHeight: "100%",
+      fontWeight: "600",
+    },
+  ],
+  b1Sm: [
+    "1.5rem",
+    {
+      lineHeight: "130%",
+      fontWeight: "500",
+    },
+  ],
+
+  b2: [
+    "6rem",
+    {
+      lineHeight: "100%",
+      fontWeight: "600",
+    },
+  ],
+  b2Sm: [
+    "1.125rem",
+    {
+      lineHeight: "140%",
+      fontWeight: "500",
+    },
+  ],
+
+  b3: [
+    "6rem",
+    {
+      lineHeight: "100%",
+      fontWeight: "600",
+    },
+  ],
+  b3Sm: [
+    "1rem",
+    {
+      lineHeight: "150%",
+      fontWeight: "500",
+    },
+  ],
+
+  // Parágrafos
   p: [
     "1.125rem",
     {
