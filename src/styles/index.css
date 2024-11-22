@@ -4,14 +4,44 @@
 
 :root {
   @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-  
+
+  /* Cores da Marca (Principais) */
+  --blue-light: #5390e3;
+  --blue: #1b69d2;
+  --blue-dark: #1357b3;
+
+  /* Preto/Branco */
+  --white-light: #f7f9fc;
+  --white: #e8ebf0;
+  --white-dark: #d8dbe3;
+
+  --black-light: #151b26;
+  --black: #0f141f;
+  --black-dark: #06090f;
+
+  /* Cinza */
+  --gray-2: #2b2b2c;
+  --gray-3: #424344;
+  --gray-4: #595A5C;
+  --gray-5: #717274;
+  --gray-6: #888A8C;
+  --gray-7: #9EA0A3;
+
   font-family: "Rubik", sans-serif;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--white);
+  background-color: var(--black-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    225deg,
+    var(--blue-light) 8.12%,
+    var(--blue-dark) 92.21%
+  );
 }
