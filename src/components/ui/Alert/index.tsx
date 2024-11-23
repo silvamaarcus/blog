@@ -15,16 +15,16 @@ const Alert = ({
     <div
       className={`flex items-center justify-between gap-2 rounded px-[18px] py-3 ${
         variant === "notification"
-          ? "bg-blue-600"
+          ? "bg-customBlue-normal"
           : variant === "success"
-            ? "bg-green-600"
+            ? "bg-customAuxiliary-green"
             : variant === "error"
-              ? "bg-red-600"
+              ? "bg-customAuxiliary-red"
               : variant === "warning"
-                ? "bg-yellow-600"
+                ? "bg-customAuxiliary-yellow"
                 : variant === "info"
-                  ? "bg-netral-100"
-                  : "bg-blue-600" // Default
+                  ? "bg-customWhite-dark"
+                  : "bg-customBlue-normal" // Default
       } ${className}`}
     >
       <p className={`${variant === "info" ? "text-black" : ""}`}>{message}</p>
@@ -32,7 +32,7 @@ const Alert = ({
         className={`${variant === "info" ? "font-bold text-black" : ""} cursor-pointer`}
         onClick={onclick}
       >
-        x
+        ✖
       </span>
     </div>
   );
