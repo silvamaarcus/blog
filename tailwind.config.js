@@ -43,6 +43,11 @@ export default {
           gray_6: "var(--gray-6)",
           gray_7: "var(--gray-7)",
         },
+        customAuxiliary: {
+          red: "var(--red)",
+          yellow: "var(--yellow)",
+          green: "var(--green)",
+        },
       },
       fontSize: {
         ...textStyles, // Importando as configurações de texto

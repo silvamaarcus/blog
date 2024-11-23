@@ -27,6 +27,11 @@
   --gray-6: #888A8C;
   --gray-7: #9EA0A3;
 
+  /* Cores auxiliares */
+  --red: #F03D3D;
+  --green: #0BB07B;
+  --yellow: #FFCE52;
+
   font-family: "Rubik", sans-serif;
 
   color: var(--white);
