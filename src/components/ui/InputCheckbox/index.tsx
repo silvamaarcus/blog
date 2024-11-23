@@ -8,9 +8,7 @@ export interface InputCheckboxProps {
 
 const InputCheckbox = ({ label, disable, className }: InputCheckboxProps) => {
   return (
-    <label
-      className={`custom-checkbox flex items-center p-4 ${className} border`}
-    >
+    <label className={`custom-checkbox flex items-center p-4 ${className}`}>
       <input type="checkbox" disabled={disable} />
       <span className="checkmark"></span>
       <span className="text-base text-customGray-gray_4">{label}</span>
