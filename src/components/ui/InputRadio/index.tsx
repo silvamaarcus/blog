@@ -1,21 +1,20 @@
 import "./styles.css";
 
-export interface InputProps {
+export interface InputRadioProps {
   label: string;
   disable?: boolean;
+  className?: string;
 }
 
-const Input = ({ label, disable }: InputProps) => {
+const InputRadio = ({ label, disable, className }: InputRadioProps) => {
   return (
-    <div className="m-4 flex items-center gap-4 p-4">
-      <input
-        type="radio"
-        className="custom-radio"
-        disabled={disable}
-      />
-      <label className="text-customGray-gray_4 text-base">{label}</label>
+    <div className={`flex items-center gap-4 p-4 ${className} border`}>
+      <input type="radio" className="custom-radio" disabled={disable} />
+      <label className="text-base text-customGray-gray_4">
+        {label}
+      </label>
     </div>
   );
 };
 
-export default Input;
+export default InputRadio;

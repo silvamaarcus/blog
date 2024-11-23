@@ -93,52 +93,6 @@ const textStyles = {
     },
   ],
 
-  // Subtítulos
-  b1: [
-    "6rem",
-    {
-      lineHeight: "100%",
-      fontWeight: "600",
-    },
-  ],
-  b1Sm: [
-    "1.5rem",
-    {
-      lineHeight: "130%",
-      fontWeight: "500",
-    },
-  ],
-
-  b2: [
-    "6rem",
-    {
-      lineHeight: "100%",
-      fontWeight: "600",
-    },
-  ],
-  b2Sm: [
-    "1.125rem",
-    {
-      lineHeight: "140%",
-      fontWeight: "500",
-    },
-  ],
-
-  b3: [
-    "6rem",
-    {
-      lineHeight: "100%",
-      fontWeight: "600",
-    },
-  ],
-  b3Sm: [
-    "1rem",
-    {
-      lineHeight: "150%",
-      fontWeight: "500",
-    },
-  ],
-
   // Parágrafos
   p: [
     "1.125rem",
