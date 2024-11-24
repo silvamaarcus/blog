@@ -7,9 +7,11 @@ import { useState } from "react";
 
 const Header = () => {
   const [open, isOpen] = useState<string>("hidden");
+  const [active, isActive] = useState<string>("");
 
   const handleClick = () => {
     isOpen(open === "hidden" ? "block" : "hidden");
+    isActive(active === "" ? "active" : "");
   };
 
   return (
@@ -53,12 +55,17 @@ const Header = () => {
             </div>
 
             <div
-              className="bx h-3 w-8 cursor-pointer hover:opacity-80"
+              className={`bx ${active} h-10 w-10 cursor-pointer hover:opacity-80`}
               onClick={handleClick}
             ></div>
 
             <span>
-              <a href="#" className="bg-gradient-1 bg-clip-text text-transparent">Login</a>
+              <a
+                href="#"
+                className="bg-gradient-1 bg-clip-text text-transparent"
+              >
+                Login
+              </a>
             </span>
           </header>
         </div>
