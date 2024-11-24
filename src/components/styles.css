@@ -4,22 +4,42 @@
 .bx {
   position: relative;
 }
-.bx:after  {
+.bx:after {
   content: "";
   position: absolute;
-  width: 24px;
+  width: 70%;
   height: 2px;
+  top: 30%;
+  left: 0;
+  border-radius: 2px;
+  background-color: var(--white-light);
+}
+.bx:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: 30%;
+  right: 0;
   border-radius: 2px;
   background-color: var(--white-light);
 }
 
-.bx:before {
+.bx.active:after {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 2px;
-  bottom: 0;
-  right: 0;
-  border-radius: 2px;
-  background-color: var(--white-light);
+  /* Centralizar */
+  transform: translate(-50%, -50%) rotate(135deg);
+  top: 50%;
+  left: 50%;
+  transition: 0.6s ease;
+}
+.bx.active:before {
+  content: "";
+  position: absolute;
+  /* Centralizar */
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+  left: 50%;
+  transition: 0.6s ease;
 }
