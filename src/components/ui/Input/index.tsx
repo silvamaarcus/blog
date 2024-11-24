@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./styles.css";
 
 export interface InputProps {
   placeholder?: string;
@@ -39,9 +38,9 @@ const Input = ({ placeholder, type, name, required }: InputProps) => {
   return (
     <div className="custom-input-container relative">
       <div
-        className={`flex items-center justify-between rounded bg-customBlack-light px-4 py-4 text-white ${
+        className={`flex items-center justify-between rounded bg-customBlack-light px-3 py-[10px] text-white ${
           required && icon === icon_erro
-            ? "border-customAuxiliary-red border"
+            ? "border border-customAuxiliary-red"
             : required && icon === icon_sucess
               ? "border border-green-500"
               : "border border-transparent"

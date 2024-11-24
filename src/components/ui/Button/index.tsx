@@ -16,7 +16,7 @@ const Button = ({
   return (
     <div>
       <button
-        className={`rounded px-14 py-3 text-customWhite-light hover:opacity-80 ${
+        className={`rounded border-0 px-6 py-2 text-customWhite-light hover:opacity-80 ${
           variant === "primary"
             ? "bg-gradient-1"
             : "border border-customBlue-light bg-transparent"

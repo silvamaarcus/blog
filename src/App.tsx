@@ -1,16 +1,11 @@
-import InputCheckbox from "./components/ui/InputCheckbox";
-import InputRadio from "./components/ui/InputRadio";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
+    <div>
+      <Header />
       <h1>Página teste</h1>
-      <InputCheckbox label="Checkbox" />
-
-      <InputCheckbox label="Checkbox" disable={true} className="mt-2" />
-
-      <InputRadio label="Radio" />
-    </>
+    </div>
   );
 }
 

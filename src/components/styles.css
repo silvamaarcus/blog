@@ -1,0 +1,25 @@
+/* Header */
+
+/* Menu Hamburuger */
+.bx {
+  position: relative;
+}
+.bx:after  {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--white-light);
+}
+
+.bx:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  border-radius: 2px;
+  background-color: var(--white-light);
+}
