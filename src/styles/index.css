@@ -20,17 +20,18 @@
   --black-dark: #06090f;
 
   /* Cinza */
+  --gray-1: #131414;
   --gray-2: #2b2b2c;
   --gray-3: #424344;
   --gray-4: #707070;
   --gray-5: #717274;
-  --gray-6: #888A8C;
-  --gray-7: #9EA0A3;
+  --gray-6: #888a8c;
+  --gray-7: #9ea0a3;
 
   /* Cores auxiliares */
-  --red: #F03D3D;
-  --green: #0BB07B;
-  --yellow: #FFCE52;
+  --red: #f03d3d;
+  --green: #0bb07b;
+  --yellow: #ffce52;
 
   font-family: "Rubik", sans-serif;
 
