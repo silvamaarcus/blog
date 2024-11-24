@@ -36,6 +36,7 @@ export default {
           dark: "var(--black-dark)",
         },
         customGray: {
+          gray_1: "var(--gray-1)",
           gray_2: "var(--gray-2)",
           gray_3: "var(--gray-3)",
           gray_4: "var(--gray-4)",
