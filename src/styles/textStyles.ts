@@ -14,7 +14,7 @@ const textStyles = {
     "6rem",
     {
       lineHeight: "90%",
-      fontWeight: "400",
+      fontWeight: "500",
     },
   ],
 
@@ -29,7 +29,7 @@ const textStyles = {
     "4rem",
     {
       lineHeight: "100%",
-      fontWeight: "600",
+      fontWeight: "400",
     },
   ],
 
