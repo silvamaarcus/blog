@@ -1,13 +1,13 @@
 export interface ButtonProps {
-  label: string;
-  variant?: "primary" | "secondary";
+  children: string | React.ReactNode;
+  variant?: "primary" | "secondary" | "alternative";
   className?: string;
   disable?: boolean;
   onClick?: () => void;
 }
 
 const Button = ({
-  label,
+  children,
   variant = "primary",
   className,
   disable,
@@ -19,12 +19,14 @@ const Button = ({
         className={`rounded border-0 px-6 py-2 text-customWhite-light hover:opacity-80 ${
           variant === "primary"
             ? "bg-gradient-1"
-            : "border border-customBlue-light bg-transparent"
+            : variant === "secondary"
+              ? "border border-customBlue-light bg-transparent"
+              : "bg-customBlack-light"
         } ${className}`}
         disabled={disable}
         onClick={onClick}
       >
-        {label}
+        {children}
       </button>
     </div>
   );
