@@ -1,6 +1,8 @@
+import { BTN_TYPE, CHILDREN_TYPE } from "../../../utils/types";
+
 export interface ButtonProps {
-  children: string | React.ReactNode;
-  variant?: "primary" | "secondary" | "alternative";
+  children: CHILDREN_TYPE;
+  variant?: BTN_TYPE;
   className?: string;
   disable?: boolean;
   onClick?: () => void;
