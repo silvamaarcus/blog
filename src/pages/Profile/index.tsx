@@ -1,6 +1,6 @@
-import Avatar from "../../components/ui/Avatar";
-import Button from "../../components/ui/Button";
-import Input from "../../components/ui/Input";
+import Avatar from "@/components/ui/Avatar";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
 
 //Icons
 import IconPlus from "/assets/svg/icon-plus.svg";

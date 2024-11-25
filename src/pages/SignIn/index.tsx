@@ -1,11 +1,11 @@
-import Logo from "../../../public/assets/svg/logo.svg";
-import Button from "../../components/ui/Button";
-import Input from "../../components/ui/Input";
-import InputCheckbox from "../../components/ui/InputCheckbox";
+import Logo from "@/public/assets/svg/logo.svg";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
+import InputCheckbox from "@/components/ui/InputCheckbox";
 
 // Icons
-import UserIcon from "../../../public/assets/svg/icon-user.svg";
-import UserPassword from "../../../public/assets/svg/icon-password.svg";
+import UserIcon from "/assets/svg/icon-user.svg";
+import UserPassword from "/assets/svg/icon-password.svg";
 
 const SignInPage = () => {
   return (

@@ -1,12 +1,12 @@
-import Logo from "../../public/assets/svg/logo.svg";
+import Logo from "@/public/assets/svg/logo.svg";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
 
 //Icons
-import FacebookIcon from "../../public/assets/svg/icon-facebook.svg";
-import InstagramIcon from "../../public/assets/svg/icon-instagram.svg";
-import YoutubeIcon from "../../public/assets/svg/icon-youtube.svg";
-import TwitterIcon from "../../public/assets/svg/icon-twitter.svg";
+import FacebookIcon from "/assets/svg/icon-facebook.svg";
+import InstagramIcon from "/assets/svg/icon-instagram.svg";
+import YoutubeIcon from "/assets/svg/icon-youtube.svg";
+import TwitterIcon from "/assets/svg/icon-twitter.svg";
 
 const Footer = () => {
   return (
@@ -67,7 +67,7 @@ const Footer = () => {
             </p>
             <div className="grid w-full grid-cols-2 items-center gap-2">
               <Input placeholder="Digite seu e-mail aqui" />
-              <Button label="Inscrever-se" />
+              <Button>Inscreva-se</Button>
             </div>
           </div>
         </div>
