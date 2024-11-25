@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import SignInPage from "./pages/SignIn";
+import ProfilePage from "./pages/Profile";
 
 function App() {
   return (
     <div className="flex flex-col gap-20">
       <Header />
-      <SignInPage />
+      <ProfilePage />
     </div>
   );
 }

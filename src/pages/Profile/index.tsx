@@ -1,10 +1,10 @@
 import Avatar from "../../components/ui/Avatar";
 import Button from "../../components/ui/Button";
+import Input from "../../components/ui/Input";
 
 //Icons
-import IconPlus from "../../../public/assets/svg/icon-plus.svg";
-import IconUser from "../../../public/assets/svg/icon-user.svg";
-import Input from "../../components/ui/Input";
+import IconPlus from "/assets/svg/icon-plus.svg";
+import IconUser from "/assets/svg/icon-user.svg";
 
 const ProfilePage = () => {
   return (
