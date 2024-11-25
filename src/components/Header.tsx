@@ -1,4 +1,5 @@
-import Logo from "@/public/assets/svg/logo.svg";
+import Logo from "/assets/svg/logo.svg";
+
 import Button from "./ui/Button";
 import Input from "./ui/Input";
 

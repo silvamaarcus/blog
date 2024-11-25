@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import ProfilePage from "./pages/Profile";
+import NotFoundPage from "./pages/NotFound";
 
 function App() {
   return (
     <div className="flex flex-col gap-20">
       <Header />
-      <ProfilePage />
+      <NotFoundPage />
     </div>
   );
 }
