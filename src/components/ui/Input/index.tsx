@@ -1,7 +1,8 @@
-import { useState } from "react";
+// 
+import React, { useState } from "react";
 
 export interface InputProps {
-  placeholder?: string;
+  placeholder?: string | React.ReactNode; // ReactNode já cobre strings e elementos JSX
   type?: string;
   name?: string;
   required?: boolean;
@@ -43,20 +44,25 @@ const Input = ({ placeholder, type, name, required, className }: InputProps) => 
           required && icon === icon_erro
             ? "border border-customAuxiliary-red"
             : required && icon === icon_sucess
-              ? "border border-customAuxiliary-green"
-              : "border border-transparent"
+            ? "border border-customAuxiliary-green"
+            : "border border-transparent"
         }`}
       >
+        {/* Placeholder customizado */}
+        {placeholder && !value && (
+          <div className="absolute left-3 top-[50%] transform -translate-y-[50%] text-customGray-gray_7 pointer-events-none">
+            {placeholder}
+          </div>
+        )}
         <input
           type={type}
           name={name}
-          placeholder={placeholder}
           value={value}
           required={required}
           onFocus={handleFocus}
           onBlur={handleBlur}
           onChange={handleChange}
-          className={`flex-1 bg-transparent text-white placeholder-customGray-gray_7 outline-none`}
+          className={`flex-1 bg-transparent text-white placeholder-transparent outline-none`}
         />
         {required && icon && (
           <span
