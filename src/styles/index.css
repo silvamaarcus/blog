@@ -74,3 +74,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background: var(--black-light);
 }
+
+/* Container customizado */
+.custom-container {
+  @apply container mx-auto my-0;
+}
+
+/* Mágica do Grid com Tailwind */
+.invisible-grid {
+  @apply hidden sm:block;
+}
