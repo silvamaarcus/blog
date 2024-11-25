@@ -40,7 +40,7 @@ const Header = () => {
 
             <div className="flex items-center gap-[68px]">
               <Input placeholder="Buscar" />
-              <Button label="Login" />
+              <Button>Login</Button>
             </div>
           </header>
         </div>

@@ -47,7 +47,7 @@ const SignInPage = () => {
               required
               className="mt-4"
             />
-            <Button label="Entrar" className="mt-6 w-full" />
+            <Button className="mt-6 w-full">Entrar</Button>
           </form>
 
           <div className="mt-8 flex w-full items-center justify-between">
