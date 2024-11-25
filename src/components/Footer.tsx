@@ -11,7 +11,7 @@ import TwitterIcon from "../../public/assets/svg/icon-twitter.svg";
 const Footer = () => {
   return (
     <main>
-      <div className="container mx-auto my-0 p-5">
+      <div className="custom-container mx-auto my-0 p-5">
         <div className="flex flex-col items-center justify-center">
           <img src={Logo} alt="Logo" className="w-14" />
           <span className="mt-2 flex">
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-8 mt-8 justify-between">
+        <div className="mt-8 flex flex-wrap justify-between gap-8">
           <p className="my-4 text-customGray-gray_5">
             2022 | Todos os direitos reservados.
           </p>

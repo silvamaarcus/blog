@@ -18,7 +18,7 @@ const Header = () => {
     <>
       {/* Desktop */}
       <section className="hidden border-b border-customBlack-light sm:block">
-        <div className="container mx-auto my-0">
+        <div className="custom-container mx-auto my-0">
           <header className="flex h-20 items-center justify-between px-5">
             <div className="flex items-center gap-14">
               <div>
@@ -48,7 +48,7 @@ const Header = () => {
 
       {/* Mobile */}
       <section className="block border-b border-customBlack-light sm:hidden">
-        <div className="container mx-auto my-0">
+        <div className="custom-container mx-auto my-0">
           <header className="flex h-20 items-center justify-between px-5">
             <div>
               <img src={Logo} alt="Logo" />
