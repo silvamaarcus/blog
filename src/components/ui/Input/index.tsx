@@ -5,9 +5,10 @@ export interface InputProps {
   type?: string;
   name?: string;
   required?: boolean;
+  className?: string;
 }
 
-const Input = ({ placeholder, type, name, required }: InputProps) => {
+const Input = ({ placeholder, type, name, required, className }: InputProps) => {
   const [icon, setIcon] = useState<string | null>(null);
   const [value, setValue] = useState<string>("");
 
@@ -36,13 +37,13 @@ const Input = ({ placeholder, type, name, required }: InputProps) => {
   };
 
   return (
-    <div className="custom-input-container relative">
+    <div className="relative">
       <div
-        className={`flex items-center justify-between rounded bg-customBlack-light px-3 py-[10px] text-white ${
+        className={`flex items-center justify-between rounded bg-customBlack-light px-3 py-[10px] text-white ${className} ${
           required && icon === icon_erro
             ? "border border-customAuxiliary-red"
             : required && icon === icon_sucess
-              ? "border border-green-500"
+              ? "border border-customAuxiliary-green"
               : "border border-transparent"
         }`}
       >
@@ -55,12 +56,12 @@ const Input = ({ placeholder, type, name, required }: InputProps) => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           onChange={handleChange}
-          className="flex-1 bg-transparent text-white placeholder-customGray-gray_7 outline-none"
+          className={`flex-1 bg-transparent text-white placeholder-customGray-gray_7 outline-none`}
         />
         {required && icon && (
           <span
             className={`ml-2 ${
-              icon === icon_erro ? "text-customAuxiliary-red" : "text-green-500"
+              icon === icon_erro ? "text-customAuxiliary-red" : "text-customAuxiliary-green"
             }`}
           >
             {icon}
