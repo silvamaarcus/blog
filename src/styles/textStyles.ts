@@ -44,7 +44,7 @@ const textStyles = {
     "3rem",
     {
       lineHeight: "110%",
-      fontWeight: "600",
+      fontWeight: "400",
     },
   ],
 
