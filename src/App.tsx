@@ -1,12 +1,9 @@
-// import HomePage from "./pages/Home";
-import PostPage from "./pages/Post";
+import AppRoutes from "./routes";
 
 function App() {
   return (
-    <div className="flex flex-col gap-20">
-      {/* <HomePage /> */}
-    
-      <PostPage />
+    <div>
+      <AppRoutes />
     </div>
   );
 }
