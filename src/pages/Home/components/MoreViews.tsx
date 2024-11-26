@@ -36,7 +36,7 @@ const MoreViewsComponent = () => {
               </h5>
               <p className="mb-6 mt-1 text-customGray-gray_5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-                urna pharetra ut ac, pellentesque.{" "}
+                urna pharetra ut ac, pellentesque.
               </p>
               <a href="#" className="text-customBlue-light hover:opacity-80">
                 Ler mais
