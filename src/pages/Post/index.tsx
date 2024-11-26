@@ -60,7 +60,7 @@ const PostPage = () => {
             </div>
 
             <div className="flex flex-wrap gap-8 rounded border border-customBlack-light p-8 sm:flex-nowrap">
-              <div className="flex w-full justify-center sm:w-auto sm:justify-start">
+              <div className="flex w-full justify-center sm:max-w-[72px] sm:justify-start">
                 <Avatar size="lg" imageUrl="https://i.pravatar.cc/150?img=1" />
               </div>
               <div className="w-full">

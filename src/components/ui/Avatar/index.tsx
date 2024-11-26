@@ -12,7 +12,7 @@ const Avatar = ({ imageUrl, alt, className, size }: AvatarProps) => {
         <img
           src={imageUrl}
           alt={alt}
-          className={`h-[48px] w-[48px] rounded-full border-2 border-customBlue-light ${className}`}
+          className={`h-[48px] w-[48px] rounded-full border-2 border-customBlue-light object-cover ${className}`}
         />
       </div>
     );
@@ -24,7 +24,7 @@ const Avatar = ({ imageUrl, alt, className, size }: AvatarProps) => {
         <img
           src={imageUrl}
           alt={alt}
-          className={`h-[64px] w-[64px] rounded-full border-2 border-customBlue-light ${className}`}
+          className={`h-[64px] w-[64px] rounded-full border-2 border-customBlue-light object-cover ${className}`}
         />
       </div>
     );
@@ -36,7 +36,7 @@ const Avatar = ({ imageUrl, alt, className, size }: AvatarProps) => {
         <img
           src={imageUrl}
           alt={alt}
-          className={`h-[72px] w-[72px] rounded-full border-2 border-customBlue-light ${className}`}
+          className={`h-[72px] w-[72px] rounded-full border-2 border-customBlue-light object-cover ${className}`}
         />
       </div>
     );

@@ -1,12 +1,7 @@
 import Logo from "/assets/svg/logo.svg";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
-
-//Icons
-import FacebookIcon from "/assets/svg/icon-facebook.svg";
-import InstagramIcon from "/assets/svg/icon-instagram.svg";
-import YoutubeIcon from "/assets/svg/icon-youtube.svg";
-import TwitterIcon from "/assets/svg/icon-twitter.svg";
+import SocialMedias from "./SocialMedias";
 
 const Footer = () => {
   return (
@@ -77,20 +72,7 @@ const Footer = () => {
             2022 | Todos os direitos reservados.
           </p>
 
-          <div className="flex items-center gap-10">
-            <a href="#">
-              <img src={FacebookIcon} alt="Facebook" className="h-8 w-8" />
-            </a>
-            <a href="#">
-              <img src={InstagramIcon} alt="Instagram" className="h-8 w-8" />
-            </a>
-            <a href="#">
-              <img src={YoutubeIcon} alt="Youtube" className="h-8 w-8" />
-            </a>
-            <a href="#">
-              <img src={TwitterIcon} alt="Twitter" className="h-8 w-8" />
-            </a>
-          </div>
+          <SocialMedias />
         </div>
       </div>
     </main>

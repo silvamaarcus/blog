@@ -1,9 +1,12 @@
-import HomePage from "./pages/Home";
+// import HomePage from "./pages/Home";
+import PostPage from "./pages/Post";
 
 function App() {
   return (
     <div className="flex flex-col gap-20">
-      <HomePage />
+      {/* <HomePage /> */}
+    
+      <PostPage />
     </div>
   );
 }
