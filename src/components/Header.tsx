@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Logo from "/assets/svg/logo.svg";
 
 import Button from "./ui/Button";
@@ -23,18 +25,20 @@ const Header = () => {
           <header className="flex h-20 items-center justify-between px-5">
             <div className="flex items-center gap-14">
               <div>
-                <img src={Logo} alt="Logo" />
+                <Link to="/home">
+                  <img src={Logo} alt="Logo" className="hover:opacity-80" />
+                </Link>
               </div>
 
               <ul className="flex list-none items-center space-x-10">
                 <li className="p-2 text-customWhite-dark hover:text-customWhite-light">
-                  <a href="#">Categoria</a>
+                  <Link to="/home">Categoria</Link>
                 </li>
                 <li className="p-2 text-customWhite-dark hover:text-customWhite-light">
-                  <a href="#">Sobre</a>
+                  <Link to="/home">Sobre</Link>
                 </li>
                 <li className="p-2 text-customWhite-dark hover:text-customWhite-light">
-                  <a href="#">Contato</a>
+                  <Link to="/home">Contato</Link>
                 </li>
               </ul>
             </div>
@@ -61,12 +65,12 @@ const Header = () => {
             ></div>
 
             <span>
-              <a
-                href="#"
+              <Link
+                to="/home"
                 className="bg-gradient-1 bg-clip-text text-transparent"
               >
                 Login
-              </a>
+              </Link>
             </span>
           </header>
         </div>
@@ -75,13 +79,13 @@ const Header = () => {
       <section className={`${open}`}>
         <ul className="border-b border-customBlack-light">
           <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
-            <a href="#">Categorias</a>
+            <Link to="/home">Categorias</Link>
           </li>
           <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
-            <a href="#">Sobre</a>
+            <Link to="/home">Sobre</Link>
           </li>
           <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
-            <a href="#">Contato</a>
+            <Link to="/home">Contato</Link>
           </li>
           <li className="p-5">
             <Input placeholder="Buscar" />
