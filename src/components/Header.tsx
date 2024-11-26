@@ -6,21 +6,39 @@ import Button from "./ui/Button";
 import Input from "./ui/Input";
 
 import "./styles.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [open, isOpen] = useState<string>("hidden");
   const [active, isActive] = useState<string>("");
 
+  const [showMenu, isShowMenu] = useState<string>("");
+
+  // Efeito Glass no Header ao fazer scroll no mouse
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleClick = () => {
     isOpen(open === "hidden" ? "block" : "hidden");
     isActive(active === "" ? "active" : "");
+    isShowMenu(showMenu === "" ? "show-menu-mobile" : "");
   };
 
   return (
     <>
       {/* Desktop */}
-      <section className="hidden border-b border-customBlack-light sm:block">
+      <section
+        className={`scroll fixed z-10 hidden w-full border-b border-customBlack-light sm:block ${isScrolled ? "bg-customAuxiliary-glass backdrop-blur-[6px]" : "bg-customAuxiliary-glass backdrop-blur-[6px]"}`}
+      >
         <div className="custom-container mx-auto my-0">
           <header className="flex h-20 items-center justify-between px-5">
             <div className="flex items-center gap-14">
@@ -52,7 +70,9 @@ const Header = () => {
       </section>
 
       {/* Mobile */}
-      <section className="block border-b border-customBlack-light sm:hidden">
+      <section
+        className={`fixed z-10 block w-full border-b border-customBlack-light sm:hidden ${isScrolled ? "bg-customAuxiliary-glass backdrop-blur-[6px]" : "bg-customAuxiliary-glass backdrop-blur-[6px]"}`}
+      >
         <div className="custom-container mx-auto my-0">
           <header className="flex h-20 items-center justify-between px-5">
             <div>
@@ -76,18 +96,20 @@ const Header = () => {
         </div>
       </section>
       {/* Menu Mobile */}
-      <section className={`${open}`}>
+      <section
+        className={`${open} ${showMenu} animation-menu-mobile h-screen w-full pt-20`}
+      >
         <ul className="border-b border-customBlack-light">
-          <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
+          <li className="inline-block w-full border-b border-customBlack-light px-2 py-6 hover:bg-customBlack-light hover:pl-6">
             <Link to="/home">Categorias</Link>
           </li>
-          <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
+          <li className="inline-block w-full border-b border-customBlack-light px-2 py-6 hover:bg-customBlack-light hover:pl-6">
             <Link to="/home">Sobre</Link>
           </li>
-          <li className="border-b border-customBlack-light p-5 hover:bg-customBlack-normal">
+          <li className="inline-block w-full border-b border-customBlack-light px-2 py-6 hover:bg-customBlack-light hover:pl-6">
             <Link to="/home">Contato</Link>
           </li>
-          <li className="p-5">
+          <li className="px-2 py-6">
             <Input placeholder="Buscar" />
           </li>
         </ul>

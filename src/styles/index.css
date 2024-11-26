@@ -33,6 +33,9 @@
   --green: #0bb07b;
   --yellow: #ffce52;
 
+  /* Glass */
+  --glass: rgba(6, 9, 15, 0.4);
+
   font-family: "Rubik", sans-serif;
 
   color: var(--white-light);

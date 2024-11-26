@@ -8,15 +8,17 @@ import Footer from "@/components/Footer";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col gap-48">
+    <>
       <Header />
-      <HeroComponent />
-      <TrendingsComponent />
-      <MoreViewsComponent />
-      <BannerComponent />
-      <RecentPostsComponent />
+      <main className="flex flex-col gap-48 pt-28 sm:pt-48">
+        <HeroComponent />
+        <TrendingsComponent />
+        <MoreViewsComponent />
+        <BannerComponent />
+        <RecentPostsComponent />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

@@ -48,6 +48,7 @@ export default {
           red: "var(--red)",
           yellow: "var(--yellow)",
           green: "var(--green)",
+          glass: "var(--glass)",
         },
       },
       fontSize: {
