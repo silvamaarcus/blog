@@ -19,12 +19,14 @@ const BannerComponent = () => {
   return (
     <>
       {post.map((item, index) => (
-        <main key={index}>
-          <img
-            src={item.imageUrl || "Imagem indisponível"}
-            alt={item.title}
-            className="max-h-[330px] w-full object-cover"
-          />
+        <main key={index} className="overflow-hidden">
+          <div className="group relative overflow-hidden">
+            <img
+              src={item.imageUrl || "Imagem indisponível"}
+              alt={item.title}
+              className="max-h-[330px] w-full transform object-cover transition-all duration-700 ease-in-out group-hover:scale-[1.025]"
+            />
+          </div>
 
           <div className="mt-12 grid grid-cols-1 gap-8 px-5 sm:grid-cols-3">
             <div className="invisible-grid col-span-2"></div>

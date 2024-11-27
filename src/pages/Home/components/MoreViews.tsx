@@ -32,12 +32,15 @@ const MoreViewsComponent = () => {
             {posts.map((post, index) => (
               <div
                 key={index}
-                className="rounded border border-customBlack-light"
+                className="rounded border border-customBlack-light overflow-hidden"
               >
-                <img
-                  src={post.imageUrl || ""}
-                  alt={post.title || "Post Image"}
-                />
+                <div className="group relative">
+                  <img
+                    src={post.imageUrl || ""}
+                    alt={post.title || "Post Image"}
+                    className="transition-all duration-700 ease-in-out transform group-hover:scale-[1.025]"
+                  />
+                </div>
                 <div className="p-5">
                   <div>
                     <p className="uppercase text-customGray-gray_5">
